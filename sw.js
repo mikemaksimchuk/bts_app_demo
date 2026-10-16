@@ -1,5 +1,6 @@
-const CACHE = 'bts-v1';
-const ASSETS = ['./', './index.html', './manifest.webmanifest', './app-icon-192.png', './app-icon-512.png'];
+const CACHE = 'bts-v2';
+const ASSETS = ['./', './index.html', './manifest.webmanifest',
+  './app-icon-180.png?v=2', './app-icon-192.png?v=2', './app-icon-512.png?v=2', './app-icon-maskable-512.png?v=2'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)).then(() => self.skipWaiting()));
